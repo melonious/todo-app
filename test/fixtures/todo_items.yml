@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  deadline: 2016-04-26 11:58:59
+  priority: 1
+  complete: false
+
+two:
+  description: MyString
+  deadline: 2016-04-26 11:58:59
+  priority: 1
+  complete: false

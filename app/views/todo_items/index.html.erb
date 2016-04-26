@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Todo Items</h1>
+<h1 id="header">Tasks at Hand:</h1>
 
 <table>
   <thead>
@@ -9,6 +9,8 @@
       <th>Deadline</th>
       <th>Priority</th>
       <th>Complete</th>
+      <th>Created</th>
+      <th>Last Updated</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,12 +19,14 @@
     <% @todo_items.each do |todo_item| %>
       <tr>
         <td><%= todo_item.description %></td>
-        <td><%= todo_item.deadline %></td>
+        <td><%= distance_of_time_in_words_to_now(todo_item.deadline) %> from now</td>
         <td><%= todo_item.priority %></td>
         <td><%= todo_item.complete %></td>
-        <td><%= link_to 'Show', todo_item %></td>
-        <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
-        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= time_ago_in_words(todo_item.created_at) %></td>
+        <td><%= time_ago_in_words(todo_item.updated_at) %></td>
+        <td><%= link_to 'Show', todo_item, id:"show" %></td>
+        <td><%= link_to 'Edit', edit_todo_item_path(todo_item), id:"edit" %></td>
+        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %></td>
       </tr>
     <% end %>
   </tbody>

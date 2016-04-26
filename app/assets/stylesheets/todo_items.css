@@ -2,3 +2,42 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+
+#show {
+  color: green;
+}
+
+#edit {
+  color: orange;
+}
+
+#destroy {
+  color: red;
+}
+
+#header {
+  color: #48404f;
+  font-size: 5em;
+}
+
+tr th {
+  color: gray;
+  font-size: 1.5em;
+}
+
+td {
+  color: #7d06e3;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: linear-gradient(80deg, #fad0fd, #e0e3ac);
+  /*background: linear-gradient(180deg, #9194b6, #000);*/
+  background-size: 200%;
+  background-position: 100%;
+  animation: background-animation 10s ease infinite alternate;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
